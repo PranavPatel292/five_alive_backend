@@ -14,7 +14,7 @@ app.get('/shuffle', (_: Request, res: Response) => {
     const shuffleData: Array<PlayingCards> | [] = initialRandomShuffle(playingCards);
 
     if(shuffleData === undefined) return
-    
+
     if (returnObject.players.length === 0) {
         for (let i = 0; i < returnObject.totalNumberOfPlayers; i++){   
             returnObject.playerAliveCards?.push(5);
@@ -37,8 +37,6 @@ app.get('/shuffle', (_: Request, res: Response) => {
     return res.send(returnObject);
 });
 
-
-// TODO: Fix the response object according to the played card.
 app.post("/play", (req: Request, res: Response) => {
     const currentPlayerId = req.body.currentPlayerId;
     if (!req.body && returnObject.isDraw1 || returnObject.isDraw2) {
@@ -67,7 +65,7 @@ app.post("/play", (req: Request, res: Response) => {
 
 
     // TODO: send error if player is not allowed to use this card.
-    if (!filterCards) return "hello";
+    if (!filterCards) return returnObject;
 
     returnObject.playedCards?.push(filterCards);
 

@@ -120,20 +120,18 @@ export const handleWildCard = (data: PlayingCards, returnObject: Result) => {
     
     if(data.wildCardName === 'PassMeBy')
         return handlePassMeBy(returnObject);
-    // TODO: make skip function
+    
     if(data.wildCardName === 'Skip')
         return handleSkipNextPlayer(returnObject);
-    // TODO: make draw1 function
+    
     if (data.wildCardName === 'Draw1')
         return handleDraw1(returnObject);
-    // TODO: make draw2 function
-    if(data.wildCardName === 'Draw2')
-        return handleDraw2(returnObject);
+    
+    if(data.wildCardName === 'Draw2')        return handleDraw2(returnObject);
     
     if(data.wildCardName === "Bomb")
         return handleBombCard(returnObject);
 
-    // TODO: make re-deal function
     if(data.wildCardName === "ReDeal")
         return handleReDeal(returnObject);
     
