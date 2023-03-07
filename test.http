@@ -1,0 +1,40 @@
+get http://localhost:3000/shuffle
+
+################################################################
+post http://localhost:3000/play
+Content-Type: application/json
+
+{
+        "id": "69",
+        "color": null,
+        "isDigit": true,
+        "isWildcard": true,
+        "digit": null,
+        "wildCardName": "ReDeal"
+      }
+
+# {
+#         "id": "69",
+#         "color": null,
+#         "isDigit": true,
+#         "isWildcard": true,
+#         "digit": null,
+#         "wildCardName": "ReDeal"
+#       }
+
+
+# {
+#         "color": "red",
+#         "isDigit": true,
+#         "isWildcard": false,
+#         "digit": 1
+# }
+
+# {
+#         "color": "red",
+#         "isDigit": true,
+#         "isWildcard": true,
+#         "wildCardName": "Reverse"
+# }
+
+
